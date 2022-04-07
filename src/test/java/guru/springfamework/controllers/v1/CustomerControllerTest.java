@@ -26,7 +26,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import guru.springfamework.api.v1.model.CustomerDTO;
-import guru.springfamework.api.v1.services.CustomerService;
+import guru.springfamework.services.CustomerService;
+import guru.springfamework.services.ResourceNotFoundException;
 
 public class CustomerControllerTest extends AbstractRestControllerTest {
 

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import guru.springfamework.api.v1.model.CustomerDTO;
 import guru.springfamework.api.v1.model.CustomerListDTO;
-import guru.springfamework.api.v1.services.CustomerService;
+import guru.springfamework.services.CustomerService;
 
 @RestController
 @RequestMapping(CustomerController.BASE_URL)

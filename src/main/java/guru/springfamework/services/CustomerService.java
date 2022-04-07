@@ -1,4 +1,4 @@
-package guru.springfamework.api.v1.services;
+package guru.springfamework.services;
 
 import java.util.List;
 

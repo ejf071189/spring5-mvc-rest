@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import guru.springfamework.api.v1.model.CategoryDTO;
 import guru.springfamework.api.v1.model.CategoryListDTO;
-import guru.springfamework.api.v1.services.CategoryService;
+import guru.springfamework.services.CategoryService;
 
 @RestController
 @RequestMapping(CategoryController.BASE_URL)
