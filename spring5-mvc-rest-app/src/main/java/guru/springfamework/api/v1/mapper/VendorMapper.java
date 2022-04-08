@@ -6,9 +6,6 @@ import org.mapstruct.factory.Mappers;
 import guru.springfamework.api.v1.model.VendorDTO;
 import guru.springfamework.domain.Vendor;
 
-/**
- * Created by jt on 10/6/17.
- */
 @Mapper
 public interface VendorMapper {
 
