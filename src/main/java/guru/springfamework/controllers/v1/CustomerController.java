@@ -1,7 +1,5 @@
 package guru.springfamework.controllers.v1;
 
-import static org.mockito.Mockito.description;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

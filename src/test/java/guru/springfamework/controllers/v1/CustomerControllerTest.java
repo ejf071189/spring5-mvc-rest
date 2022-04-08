@@ -55,12 +55,12 @@ public class CustomerControllerTest extends AbstractRestControllerTest {
         CustomerDTO customer1 = new CustomerDTO();
         customer1.setFirstname("Michale");
         customer1.setLastname("Weston");
-        customer1.setUrl(CustomerController.BASE_URL + "/1");
+        customer1.setCustomerUrl(CustomerController.BASE_URL + "/1");
 
         CustomerDTO customer2 = new CustomerDTO();
         customer2.setFirstname("Sam");
         customer2.setLastname("Axe");
-        customer2.setUrl(CustomerController.BASE_URL + "/2");
+        customer2.setCustomerUrl(CustomerController.BASE_URL + "/2");
 
         when(customerService.getAllCustomers()).thenReturn(Arrays.asList(customer1, customer2));
 
@@ -77,7 +77,7 @@ public class CustomerControllerTest extends AbstractRestControllerTest {
         CustomerDTO customer1 = new CustomerDTO();
         customer1.setFirstname("Michale");
         customer1.setLastname("Weston");
-        customer1.setUrl(CustomerController.BASE_URL + "/1");
+        customer1.setCustomerUrl(CustomerController.BASE_URL + "/1");
 
         when(customerService.getCustomerById(anyLong())).thenReturn(customer1);
 
@@ -98,7 +98,7 @@ public class CustomerControllerTest extends AbstractRestControllerTest {
         CustomerDTO returnDTO = new CustomerDTO();
         returnDTO.setFirstname(customer.getFirstname());
         returnDTO.setLastname(customer.getLastname());
-        returnDTO.setUrl(CustomerController.BASE_URL + "/1");
+        returnDTO.setCustomerUrl(CustomerController.BASE_URL + "/1");
 
         when(customerService.createNewCustomer(customer)).thenReturn(returnDTO);
 
@@ -121,7 +121,7 @@ public class CustomerControllerTest extends AbstractRestControllerTest {
         CustomerDTO returnDTO = new CustomerDTO();
         returnDTO.setFirstname(customer.getFirstname());
         returnDTO.setLastname(customer.getLastname());
-        returnDTO.setUrl(CustomerController.BASE_URL + "/1");
+        returnDTO.setCustomerUrl(CustomerController.BASE_URL + "/1");
 
         when(customerService.saveCustomerByDTO(anyLong(), any(CustomerDTO.class))).thenReturn(returnDTO);
 
@@ -145,7 +145,7 @@ public class CustomerControllerTest extends AbstractRestControllerTest {
         CustomerDTO returnDTO = new CustomerDTO();
         returnDTO.setFirstname(customer.getFirstname());
         returnDTO.setLastname("Flintstone");
-        returnDTO.setUrl(CustomerController.BASE_URL + "/1");
+        returnDTO.setCustomerUrl(CustomerController.BASE_URL + "/1");
 
         when(customerService.patchCustomer(anyLong(), any(CustomerDTO.class))).thenReturn(returnDTO);
 

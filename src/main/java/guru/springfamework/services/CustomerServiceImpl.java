@@ -29,7 +29,7 @@ public class CustomerServiceImpl implements CustomerService {
                 .stream()
                 .map(customer -> {
                    CustomerDTO customerDTO = customerMapper.customerToCustomerDTO(customer);
-                   customerDTO.setUrl(getCustomerUrl(customer.getId()));
+                   customerDTO.setCustomerUrl(getCustomerUrl(customer.getId()));
                    return customerDTO;
                 })
                 .collect(Collectors.toList());
@@ -42,7 +42,7 @@ public class CustomerServiceImpl implements CustomerService {
                 .map(customerMapper::customerToCustomerDTO)
                 .map(customerDTO -> {
                     //set API URL
-                    customerDTO.setUrl(getCustomerUrl(id));
+                    customerDTO.setCustomerUrl(getCustomerUrl(id));
                     return customerDTO;
                 })
                 .orElseThrow(ResourceNotFoundException::new);
@@ -59,7 +59,7 @@ public class CustomerServiceImpl implements CustomerService {
 
         CustomerDTO returnDto = customerMapper.customerToCustomerDTO(savedCustomer);
 
-        returnDto.setUrl(getCustomerUrl(savedCustomer.getId()));
+        returnDto.setCustomerUrl(getCustomerUrl(savedCustomer.getId()));
 
         return returnDto;
     }
@@ -86,7 +86,7 @@ public class CustomerServiceImpl implements CustomerService {
 
             CustomerDTO returnDto = customerMapper.customerToCustomerDTO(customerRepository.save(customer));
 
-            returnDto.setUrl(getCustomerUrl(id));
+            returnDto.setCustomerUrl(getCustomerUrl(id));
 
             return returnDto;
 
